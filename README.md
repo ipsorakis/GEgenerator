@@ -20,9 +20,9 @@ maximalCliques.m
 URL: http://www.mathworks.co.uk/matlabcentral/fileexchange/19889-maximal-cliques
 
 by Ahmad Humyn (ahmad.humyn@gmail.com) of Georgia Tech. Copyright and license of use are provided in the license.txt file in this package.
-==========================
 
 Inputs:
+==========================
 
 A: NxN adjacency matrix
 
