@@ -1,4 +1,4 @@
-function [DATA B] = create_data_stream_given_graph_cliques(A,Z,dt_in,dt_out,noise_level)
+function [DATA B] = create_data_stream_given_graph(A,Z,dt_in,dt_out,noise_level)
 
 %Inputs:
 %A: NxN adjacency matrix
