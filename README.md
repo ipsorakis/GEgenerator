@@ -47,7 +47,7 @@ column: location ID (fixed to 1 for compatibility with gmmevents)
 
 Example:
 =======
-Say we have created a social network between N individuals, which is described by an adjacency matrix A of size NxN, where A[i,j] = 1 if individuals i and j are connected.
+Say we have created a social network between N individuals, which is described by an adjacency matrix A of size NxN, where A[i,j] = 1 if individuals i and j are connected and 0 otherwise.
 
 We create a data stream of 1000 observations that possesses gathering event structure (see paper “Inferring social network structure in ecological systems from spatio-temporal data streams” 2012), where within each event individuals are ~2 seconds apart, while the time gap between different events is ~60 seconds. 
 
@@ -56,5 +56,5 @@ We may also want to add some noise in the data, so that we may find some coincid
 To generate such a data stream we write:
 
 ```
->> create_data_stream_given_graph_cliques(A,1000,2,60,0.15)
+>> create_data_stream_given_graph(A,1000,2,60,0.15)
 ```
