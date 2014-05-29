@@ -22,17 +22,26 @@ URL: http://www.mathworks.co.uk/matlabcentral/fileexchange/19889-maximal-cliques
 by Ahmad Humyn (ahmad.humyn@gmail.com) of Georgia Tech. Copyright and license of use are provided in the license.txt file in this package.
 ==========================
 
-%Inputs:
-%A: NxN adjacency matrix
-%Z: length of the data stream
-%dt_in: Poisson rate of the average time between observations within  an event 
-%dt_out:Poisson rate of the average time between observations between events.
-% (if dt_in is much smaller than dt_out, we have very modular and "clear" gathering event structure,
-% if dt_in = dt_out we have a uniform data stream with no gathering event presence.)
-%noise_level: \in [0,1] noise level. It defines the probability of unconnected individuals to appear within a
-%gathering event.
+Inputs:
 
-%Output:
-%DATA: Zx3 data stream. 1st column: timestamp | 2nd column: individual ID | 3rd
-%column: location ID (fixed to 1 for compatibility with gmmevents)
+A: NxN adjacency matrix
+
+Z: length of the data stream
+
+dt_in: Poisson rate of the average time between observations within  an event 
+
+dt_out:Poisson rate of the average time between observations between events.
+
+ (if dt_in is much smaller than dt_out, we have very modular and "clear" gathering event structure,
+ if dt_in = dt_out we have a uniform data stream with no gathering event presence.)
+
+noise_level: \in [0,1] noise level. It defines the probability of unconnected individuals to appear within a
+
+gathering event.
+
+Output:
+
+DATA: Zx3 data stream. 1st column: timestamp | 2nd column: individual ID | 3rd
+
+column: location ID (fixed to 1 for compatibility with gmmevents)
 
