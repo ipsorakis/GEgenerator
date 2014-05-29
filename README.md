@@ -45,3 +45,16 @@ DATA: Zx3 data stream. 1st column: timestamp | 2nd column: individual ID | 3rd
 
 column: location ID (fixed to 1 for compatibility with gmmevents)
 
+Example:
+=======
+Say we have created a social network between N individuals, which is described by an adjacency matrix A of size NxN, where A[i,j] = 1 if individuals i and j are connected.
+
+We create a data stream of 1000 observations that possesses gathering event structure (see paper “Inferring social network structure in ecological systems from spatio-temporal data streams” 2012), where within each event individuals are ~2 seconds apart, while the time gap between different events is ~60 seconds. 
+
+We may also want to add some noise in the data, so that we may find some coincidental co-occurrences in gathering events among individuals who are not connected in the network implied by A. Say that the probability of such random co-occurrences is 15%.
+
+To generate such a data stream we write:
+
+```
+>> create_data_stream_given_graph_cliques(A,1000,2,60,0.15)
+```
